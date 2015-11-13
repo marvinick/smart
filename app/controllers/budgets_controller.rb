@@ -1,5 +1,7 @@
 class BudgetsController < ApplicationController
   def index
+    @budgets = Budget.all
+    @timetables = Timetable.all
   end
 
   def new
