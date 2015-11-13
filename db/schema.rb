@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151113082614) do
+ActiveRecord::Schema.define(version: 20151113202236) do
 
   create_table "budgets", force: :cascade do |t|
     t.integer  "amount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "timetables", force: :cascade do |t|
+    t.integer  "hour"
+    t.integer  "day"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
