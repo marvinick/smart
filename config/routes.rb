@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
+  root 'pages#home'
+
   resources :timetables
   resources :budgets
-  root "budgets#index"
+  
 end
