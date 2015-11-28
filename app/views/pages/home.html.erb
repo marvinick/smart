@@ -1,14 +1,4 @@
 <div class="jumbotron">
+	<h1><span>Travel. Smart.</span></h1>
+	<h2><span>Coming 2016</span></h2>
 </div>
-
-<%= link_to "Enter Budget", new_budget_path %>
-<%= link_to "Time Table", new_timetable_path %>
-
-<% @budgets.each do |budget| %>
-	<%= budget.amount %>
-<% end %>
-
-<% @timetables.each do |t| %>
-	<%= t.day %>
-	<%= t.hour %>
-<% end %>
