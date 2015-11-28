@@ -3,7 +3,7 @@ class BudgetsController < ApplicationController
     @budgets = Budget.all
     @timetables = Timetable.all
   end
-
+ 
   def new
   	@budget = Budget.new
   end
