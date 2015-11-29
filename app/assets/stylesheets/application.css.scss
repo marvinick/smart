@@ -18,15 +18,85 @@
 @import "bootstrap";
 @import "font-awesome";
 
+#clockdiv{
+   font-family: sans-serif;
+   color: black;
+   display: inline-block;
+   font-weight: 100;
+   text-align: center;
+   font-size: 30px;
+   padding-top: 250px;
+   opacity: 0.8;
+}
+
+#clockdiv > div{
+   padding: 10px;
+   border-radius: 3px;
+   background: white;
+   display: inline-block;
+   opacity: 0.8;
+}
+
+#clockdiv div > span{
+   padding: 15px;
+   border-radius: 3px;
+   background: white;
+   display: inline-block;
+   opacity: 0.8;
+}
+
+.smalltext{
+   padding-top: 5px;
+   font-size: 16px;
+}
+
+.nav {
+   background-color: black;
+   height: 50px;
+   position: fixed;
+   width: 100%;
+   opacity: 0.7;
+}
+
+.nav li {
+   color: white;
+   display: inline-block;
+   position: pull-right;
+   display: inline_block;
+   margin-left: 10px;
+   margin-right: 20px;
+   margin-top: 20px;
+}
+
+li:hover {
+   opacity: 0.9;
+}
+
+h3:hover {
+   opacity: 0.9;
+}
+
+
+.nav h3 {
+   color: white;
+   display: inline_block;
+   margin-left: 20px;
+   margin-top: 15px;
+}
+
+.container {
+   width: 100%;
+}
+
 .jumbotron {
-	background: image-url("travel.jpg");
-	height: 650px;
+   background: image-url("travel.jpg");
+	height: 700px;
 	width: 100%;
 }
 
 h1 { 
    position: absolute; 
-   top: 200px; 
+   top: 100px; 
    left: 0; 
    width: 100%; 
 }
@@ -47,7 +117,7 @@ h1 span:hover {
 
 h2 { 
    position: absolute; 
-   top: 300px; 
+   top: 200px; 
    right: 0; 
    width: 100%; 
 }
