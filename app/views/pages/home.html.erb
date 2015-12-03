@@ -1,30 +1,12 @@
-<div class="jumbotron">
-	<center>
-		<h1><span>Travel. Smart.</span></h1>
-		<h2><span>Coming Summer 2016</span></h2>
-	
-		<div id="clockdiv">
-	  <div>
-	    <span class="days"></span>
-	    <div class="smalltext">Days</div>
-	  </div>
-	  <div>
-	    <span class="hours"></span>
-	    <div class="smalltext">Hours</div>
-	  </div>
-	  <div>
-	    <span class="minutes"></span>
-	    <div class="smalltext">Minutes</div>
-	  </div>
-	  <div>
-	    <span class="seconds"></span>
-	    <div class="smalltext">Seconds</div>
-	  </div>
-	 </center>
-</div>
+<div id='map' class='dark'></div>
 
 
-<script>
+
+<script type='text/javascript'>
+  //map 
+  var map = L.mapbox.map('map', 'examples.map-y7l23tes').setView([37.9, -77], 5);
+
+  //clock
 	function getTimeRemaining(endtime){
   var t = Date.parse(endtime) - Date.parse(new Date());
   var seconds = Math.floor( (t/1000) % 60 );
