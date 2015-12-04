@@ -1,4 +1,6 @@
 class TimetablesController < ApplicationController
+	before_action :set_timetable, only: [:show, :edit, :update, :destroy]
+
 	def new
 		@timetable = Timetable.new
 	end
@@ -14,7 +16,29 @@ class TimetablesController < ApplicationController
 		end
 	end
 
+	def show; end 
+
+	def edit; end 
+
+	def update 
+		if @timetable.save
+			flash[:notice] = "Your timetable has been updated."
+			redirect_to @timetable 
+		else
+			flash.now[:alert] = "There is something wrong."
+			render :edit
+		end
+	end
+
+	def destroy
+		@timetable.destroy 
+	end
+
 	private 
+
+	def set_timetable 
+		@timetable = Timetable.find(params[:id])
+	end
 
 	def timetable_params
 		params.require(:timetable).permit(:day, :hour)
